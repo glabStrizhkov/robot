@@ -1,0 +1,32 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "api",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "api": "node server.js",
+    "sendIP": "node ./modules/sendIp/IPSender.js",
+    "dbMaster": "node ./modules/dbMaster/main.js",
+    "client": "npm run start --prefix ./modules/client",
+    "start:user": "concurrently \"node server.js\" \"npm run start --prefix ./modules/client\"",
+    "start:full": "concurrently \"node server.js\" \"npm run start --prefix ./modules/client\" \"node ./modules/dbMaster/main.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/glabstrizhkov/robot.git"
+  },
+  "keywords": [
+    "robot"
+  ],
+  "author": "Glab Strizhkov",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "body-parser": "^1.19.2",
+    "concurrently": "^7.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3"
+  }
+}
