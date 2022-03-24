@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
+const sendIP = require('./src/helpers/sendIP');
+
 require('dotenv').config();
 const { PORT } = process.env;
 
@@ -10,6 +12,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ urlencoded: true }));
 app.use(express.text({ type: 'application/json' }));
+sendIP();
 
 app.get('/health', (req, res) => {
     res.status(200).send("OK");
