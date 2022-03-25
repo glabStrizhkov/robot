@@ -10,7 +10,7 @@ const myIp = require('underscore')
     .find({family: 'IPv4', internal: false})
     .value()
     .address;
-
+/*
 const getSerial = () => {
     let returnObj = { is_serialReady : true }
     const serial =  new SerialPort({ path: process.env.SERIAL_PATH , baudRate: +process.env.SERIAL_SPEED, autoOpen: true }, (error) => {
@@ -38,15 +38,16 @@ const send = (serial, is_serialReady) => {
         })();
     }
 }
+*/
 
-const sendIP = async () => {
-    try {
-        await exec(`chmod 666 ${process.env.SERIAL_PATH}`);
-    } catch (error) {
-        console.log({ msg: "SERIAL IS NOT AVAILABLE!", error });
-    }
-    const { serial, is_serialReady } = await getSerial();
-    await send(serial, is_serialReady);
+const sendIP = () => {
+    // try {
+    exec(`../../sh/runSendIP.sh`);
+    // } catch (error) {
+    //     console.log({ msg: "SERIAL IS NOT AVAILABLE!", error });
+    // }
+    // // const { serial, is_serialReady } = await getSerial();
+    // await send(serial, is_serialReady);
 
 }
 
