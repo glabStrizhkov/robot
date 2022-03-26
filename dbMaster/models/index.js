@@ -11,7 +11,7 @@ const { DATABASE, DB_USER, DB_PASSWORD } = process.env;
 console.log(process.env);
 
 const sequelize = new Sequelize(DATABASE, DB_USER, DB_PASSWORD, {
-  host: process.env.DB_HOST,
+  // host: process.env.DB_HOST,
   port: process.env.DB_PORT,
   dialect: process.env.DIALECT,
   logging: false
