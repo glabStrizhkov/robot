@@ -8,6 +8,7 @@ const db = {};
 let modelList = [];
 
 const { DATABASE, DB_USER, DB_PASSWORD } = process.env;
+console.log(process.env);
 
 const sequelize = new Sequelize(DATABASE, DB_USER, DB_PASSWORD, {
   host: process.env.DB_HOST,
