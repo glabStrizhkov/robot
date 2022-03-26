@@ -15,7 +15,8 @@
     "url": "sd"
   },
   "keywords": [
-    "robot"
+    "robot",
+    "db"
   ],
   "author": "Glab Strizhkov",
   "license": "MIT",
