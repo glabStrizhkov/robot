@@ -5,7 +5,7 @@
   "main": "./modules/api/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dbMaster": "npm run start --prefix ./modules/dbMaster",
+    "dbMaster:up": "npm run docker:up --prefix ./modules/dbMaster",
     "api": "npm run start --prefix ./modules/api"
   },
   "repository": {

@@ -1,0 +1,8 @@
+version: '3'
+services:
+  db-master:
+    image: glab16/db_master
+    container_name: db_master
+    restart: always
+    ports:
+      - "3002:3002"
