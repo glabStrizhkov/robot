@@ -4,5 +4,13 @@ services:
     image: glab16/db_master
     container_name: db_master
     restart: always
+    environment:
+      PORT: 3002
+      DATABASE: robot
+      DB_USER: robot
+      DB_PASSWORD: robot
+      DB_HOST: localhost
+      DB_PORT: 5432
+      DIALECT: postgress
     ports:
       - "3002:3002"
