@@ -1,0 +1,12 @@
+version: '3'
+services:
+  api:
+    image: glab16/api
+    container_name: api
+    restart: always
+    environment:
+      PORT: 3001
+      IP_HOLDER_URL: http://ip-holder.herokuapp.com/api/v1/ipHolder
+      MY_PRODUCT_ID: 105
+    ports:
+      - "3001:3001"
