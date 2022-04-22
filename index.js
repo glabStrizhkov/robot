@@ -16,4 +16,4 @@ exec('npm run api', (error, stdout, stderr) => {
     console.log(`stdout:\n${stdout}`);
 });
 
-app.listens
+app.listen(3100, () => console.log('run service started on port 3100'));
