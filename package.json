@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dbMaster:up": "npm run docker:up --prefix ./modules/dbMaster",
-    "api:up": "npm run docker:up --prefix ./modules/api"
+    "api:pm": "pm2 start ./modules/api/main.js --name <api>"
   },
   "repository": {
     "type": "git",
