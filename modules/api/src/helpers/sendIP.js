@@ -9,7 +9,7 @@ class SendIP {
         this._getIP();
     }
 
-    sendIP() {
+    sendIP = async () => {
         let ans = {};
         ans["msg"] = "IP ADDRESS SET";
         ans["type"] = "WEB";
@@ -17,7 +17,7 @@ class SendIP {
 
         let response = {};
         let type = 'WEB';
-        response = this._ipHolder.sendIP();
+        response = await this._ipHolder.sendIP();
         if(response.error) {
             response = { msg: "Here mast be answer from method board" };
             type = 'BOARD';

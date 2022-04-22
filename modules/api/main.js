@@ -11,7 +11,11 @@ const { PORT, IP_HOLDER_URL, MY_PRODUCT_ID } = process.env;
 const app = express();
 const ipHolder = new IP(IP_HOLDER_URL, MY_PRODUCT_ID);
 const sendIP = new SendIP(ipHolder);
-sendIP.sendIP();
+(async () => {
+    const sendIPResponse = await sendIP.sendIP();
+    console.log(111, sendIPResponse);
+})();
+
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ urlencoded: true }));

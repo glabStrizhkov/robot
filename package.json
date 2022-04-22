@@ -8,7 +8,7 @@
     "pm:run": "pm2 start index.js --name run",
     "pm:save": "pm2 save",
     "dbMaster:up": "npm run docker:up --prefix ./modules/dbMaster",
-    "api": "npm run start --prefix ./modules/api"
+    "pm:api": "npm run pm --prefix ./modules/api"
   },
   "repository": {
     "type": "git",
