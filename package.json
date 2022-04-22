@@ -5,8 +5,10 @@
   "main": "./modules/api/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "pm:run": "pm2 start index.js --name run",
+    "pm:save": "pm2 save",
     "dbMaster:up": "npm run docker:up --prefix ./modules/dbMaster",
-    "api:pm": "pm2 start ./modules/api/main.js --name <api>"
+    "api": "npm run start --prefix ./modules/api"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/glabStrizhkov/robot/issues"
   },
-  "homepage": "https://github.com/glabStrizhkov/robot#readme"
+  "homepage": "https://github.com/glabStrizhkov/robot#readme",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "express": "^4.17.3"
+  }
 }
