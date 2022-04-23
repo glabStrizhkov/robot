@@ -3,8 +3,10 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const { IP } = require('robot-npm-ip-holder');
 require('dotenv').config();
+const swaggerUi = require('swagger-ui-express');
 
 const { SendIP } = require('./src/helpers/sendIP');
+const { specs } = require('./swagger');
 
 const { PORT, IP_HOLDER_URL, MY_PRODUCT_ID } = process.env;
 
@@ -20,6 +22,8 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ urlencoded: true }));
 app.use(express.text({ type: 'application/json' }));
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
+
 
 app.get('/health', (req, res) => {
     res.status(200).send("OK");

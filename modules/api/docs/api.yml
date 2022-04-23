@@ -1,0 +1,28 @@
+openapi: 3.0.0
+info:
+  version: "1.0.0"
+  title: robotAPI
+  description: Swagger for testing robot api.
+x-tagGroups:
+  - name: API
+    tags:
+      - instruments
+tags:
+  - name: instruments
+    x-displayName: Instruments
+    description: Instruments related endpoints.
+servers:
+  - url: http://localhost:3003
+    description: Localhost client API (development)
+paths:
+  /:
+    get:
+      tags:
+        - nothing
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object

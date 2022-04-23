@@ -23,6 +23,8 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
-    "robot-npm-ip-holder": "^1.0.2-onlyserver"
+    "robot-npm-ip-holder": "^1.0.2-onlyserver",
+    "swagger-jsdoc": "^6.2.1",
+    "swagger-ui-express": "^4.3.0"
   }
 }

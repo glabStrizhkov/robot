@@ -1,0 +1,124 @@
+paths:
+  /api/v1/instruments/add:
+    post:
+      tags:
+        - instruments
+      summary: Add instrument
+      description: Add instrument to database.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - email
+              properties:
+                email:
+                  type: string
+                  example: test@gmail.com
+      responses:
+        200:
+          description: OK
+  /api/v1/instruments/get:
+    get:
+      tags:
+        - instruments
+      summary: Get instruments
+      description: Get all instruments from database.
+      responses:
+        200:
+          description: OK
+  /api/v1/instruments/get/{id}:
+    get:
+      tags:
+        - instruments
+      summary: Get instrument
+      description: Get one instrument from database.
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: instrument id
+      responses:
+        200:
+          description: OK
+  /api/v1/instruments/connect/{id}:
+    get:
+      tags:
+        - instruments
+      summary: Connect instrument
+      description: Connect instrument with robot.
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: instrument id
+      responses:
+        200:
+          description: OK
+  /api/v1/instruments/disconnect/{id}:
+    get:
+      tags:
+        - instruments
+      summary: Disconnect instrument
+      description: Disconnect instrument with robot.
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: instrument id
+      responses:
+        200:
+          description: OK
+  /api/v1/instruments/update/{id}:
+    patch:
+      tags:
+        - instruments
+      summary: Update instrument
+      description: Update instrument's parameters in database.
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: instrument id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: test@gmail.com
+      responses:
+        200:
+          description: OK
+  /api/v1/instruments/remove/{id}:
+    delete:
+      tags:
+        - instruments
+      summary: Remove instrument
+      description: Remove instrument from database.
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: instrument id
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+

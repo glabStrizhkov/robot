@@ -25,6 +25,8 @@
   "homepage": "https://github.com/glabStrizhkov/robot#readme",
   "dependencies": {
     "child_process": "^1.0.2",
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "swagger-jsdoc": "^6.2.1",
+    "swagger-ui-express": "^4.3.0"
   }
 }
