@@ -11,6 +11,6 @@ services:
       DB_PASSWORD: robot
       DB_HOST: localhost
       DB_PORT: 5432
-      DIALECT: postgress
+      DIALECT: postgres
     ports:
       - "3002:3002"
