@@ -32,10 +32,27 @@ The api have 4 root brunches.
 
 1. /api/v1 - system routes, works for connections different parts of robot and install comunication.
     * /instruments - route for working with entity Instruments in database.
+   
         Post: /add - add instrument to database.
+   
         Get: /get - get all instruments from database.
+   
         Get: /get/:id - get an instrument from database.
+   
         Get: /connect/:id - connect instrument with robot.
+   
         Get: /disconnect/:id - disconnect instrument with robot.
+   
         Patch: /update/:id - disconnect instrument with robot.
+   
         Delete: /remove/:id - disconnect instrument with robot.
+
+
+
+## entities
+* Instruments - object in database, that contains parameters of the instruments which connect to the robot.
+     
+**fields**
+```js
+
+```

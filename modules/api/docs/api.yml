@@ -12,7 +12,7 @@ tags:
     x-displayName: Instruments
     description: Instruments related endpoints.
 servers:
-  - url: http://localhost:3003
+  - url: http://localhost:3001
     description: Localhost client API (development)
 paths:
   /:
