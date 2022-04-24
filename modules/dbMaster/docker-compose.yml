@@ -1,7 +1,7 @@
 version: '3'
 services:
   db-master:
-    image: glab16/db_master
+    image: glab16/db_master:latest
     container_name: db_master
     restart: always
     environment:
