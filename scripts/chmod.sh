@@ -1,6 +1,6 @@
-cd scrtipts
+cd ./scripts
 
-cd up-down
+cd ./up-down
 sudo chmod +x ./docker-up.sh
 sudo chmod +x ./docker-down.sh
 sudo chmod +x ./pm2-run.sh
