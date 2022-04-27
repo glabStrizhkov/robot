@@ -4,11 +4,14 @@
   "description": "robot-app",
   "main": "./modules/api/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "pm:run": "pm2 start index.js --name run",
-    "pm:save": "pm2 save",
-    "dbMaster:up": "npm run docker:up --prefix ./modules/dbMaster",
-    "pm:api": "npm run pm --prefix ./modules/api"
+    "chmod:chmod-sh": "chmod +x ./scripts/chmod.sh",
+    "chmod:all": "./scripts/chmod.sh",
+
+    "docker:up-d-all": "scripts/up-down/docker-up.sh",
+    "docker:down-all": "scripts/up-down/docker-down.sh",
+
+    "pm2:up-api": "scripts/up-down/pm2-run.sh",
+    "pm2:down-api": "scripts/up-down/pm2-stop.sh"
   },
   "repository": {
     "type": "git",
@@ -22,11 +25,5 @@
   "bugs": {
     "url": "https://github.com/glabStrizhkov/robot/issues"
   },
-  "homepage": "https://github.com/glabStrizhkov/robot#readme",
-  "dependencies": {
-    "child_process": "^1.0.2",
-    "express": "^4.17.3",
-    "swagger-jsdoc": "^6.2.1",
-    "swagger-ui-express": "^4.3.0"
-  }
+  "homepage": "https://github.com/glabStrizhkov/robot#readme"
 }
