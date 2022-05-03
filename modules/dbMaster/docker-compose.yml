@@ -13,5 +13,7 @@ services:
       DB_PORT: 5432
       DIALECT: postgres
       IS_DEV: false
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     ports:
       - "3002:3002"
