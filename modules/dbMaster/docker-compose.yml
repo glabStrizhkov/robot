@@ -14,9 +14,10 @@ services:
       DIALECT: postgres
       IS_DEV: true
     networks:
+
       - docker-robot-network
     ports:
       - "3002:3002"
 networks:
-  my-network:
+  docker-robot-network:
     external: true
