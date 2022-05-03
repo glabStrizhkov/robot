@@ -18,6 +18,7 @@ services:
       - docker-robot-network
     ports:
       - "3002:3002"
+      - "127.0.0.1:3002"
 networks:
   default:
     external:
