@@ -15,5 +15,10 @@ services:
       IS_DEV: true
     extra_hosts:
       - "host.docker.internal:host-gateway"
+    networks:
+      - docker-robot-network
     ports:
       - "3002:3002"
+networks:
+  my-network:
+    external: true

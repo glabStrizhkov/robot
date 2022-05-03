@@ -10,5 +10,10 @@ services:
       POSTGRES_PASSWORD: robot
     extra_hosts:
       - "host.docker.internal:host-gateway"
+    networks:
+      - docker-robot-network
     ports:
       - "5432:5432"
+networks:
+  my-network:
+    external: true
