@@ -9,10 +9,10 @@ services:
       DATABASE: robot
       DB_USER: robot
       DB_PASSWORD: robot
-      DB_HOST: localhost
+      DB_HOST: 127.0.0.1
       DB_PORT: 5432
       DIALECT: postgres
-      IS_DEV: false
+      IS_DEV: true
     extra_hosts:
       - "host.docker.internal:host-gateway"
     ports:
