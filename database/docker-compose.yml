@@ -13,5 +13,6 @@ services:
     ports:
       - "5432:5432"
 networks:
-  docker-robot-network:
-    external: true
+  default:
+    external:
+      name: docker-robot-network

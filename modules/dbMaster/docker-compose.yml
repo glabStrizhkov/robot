@@ -19,5 +19,6 @@ services:
     ports:
       - "3002:3002"
 networks:
-  docker-robot-network:
-    external: true
+  default:
+    external:
+      name: docker-robot-network
