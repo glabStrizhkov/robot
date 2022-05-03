@@ -13,8 +13,6 @@ services:
       DB_PORT: 5432
       DIALECT: postgres
       IS_DEV: true
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
     networks:
       - docker-robot-network
     ports:

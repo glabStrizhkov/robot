@@ -8,8 +8,6 @@ services:
       POSTGRES_USER: robot
       POSTGRES_DB: robot
       POSTGRES_PASSWORD: robot
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
     networks:
       - docker-robot-network
     ports:
