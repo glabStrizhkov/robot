@@ -10,7 +10,7 @@ services:
       POSTGRES_PASSWORD: robot
     networks:
       - robot
-    hostname: 127.0.0.1
+    hostname: 192.168.0.105
     ports:
       - "5432:5432"
   db-master:
@@ -22,13 +22,13 @@ services:
       DATABASE: robot
       DB_USER: robot
       DB_PASSWORD: robot
-      DB_HOST: 127.0.0.1
+      DB_HOST: 192.168.0.105
       DB_PORT: 5432
       DIALECT: postgres
-      IS_DEV: true
+      IS_DEV: false
     networks:
       - robot
-    hostname: 127.0.0.1
+    hostname: 192.168.0.105
     ports:
       - "3002:3002"
 networks:
