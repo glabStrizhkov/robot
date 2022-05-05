@@ -4,6 +4,7 @@ const cors = require('cors');
 const { IP } = require('robot-npm-ip-holder');
 require('dotenv').config();
 const swaggerUi = require('swagger-ui-express');
+const axios = require('axios');
 
 const { SendIP } = require('./src/helpers/sendIP');
 const { specs } = require('./swagger');
@@ -29,6 +30,21 @@ app.get('/health', (req, res) => {
     res.status(200).send("OK");
 });
 app.use('/api', require('./src/api'));
+
+(async () => {
+    try {
+        const config = {
+            method: 'get',
+            url: 'http://192.168.0.105:3002/health'
+        }
+        const ans = await axios(config);
+        console.log({ response: ans.data });
+    } catch (err) {
+        console.log({ err });
+    }
+})()
+
+
 
 app.listen(PORT, () => console.info(`API on port ${PORT}`));
 
