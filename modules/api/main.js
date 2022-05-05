@@ -30,5 +30,17 @@ app.get('/health', (req, res) => {
 });
 app.use('/api', require('./src/api'));
 
+(async() => {
+   try {
+        const ans = await axios({
+            method: 'get',
+            url: '172.17.0.1:3002/health'
+        })
+       console.log({ res: ans.data });
+   } catch (error) {
+       console.log({ error });
+   }
+})()
+
 app.listen(PORT, () => console.info(`API on port ${PORT}`));
 
