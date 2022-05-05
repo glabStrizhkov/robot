@@ -11,6 +11,8 @@ services:
     networks:
       - robot
     hostname: 192.168.0.105
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     ports:
       - "5432:5432"
   db-master:
@@ -29,6 +31,8 @@ services:
     networks:
       - robot
     hostname: 192.168.0.105
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     ports:
       - "3002:3002"
 networks:
