@@ -16,35 +16,19 @@ const ipHolder = new IP(IP_HOLDER_URL, MY_PRODUCT_ID);
 const sendIP = new SendIP(ipHolder);
 (async () => {
     const sendIPResponse = await sendIP.sendIP();
-    console.log(111, sendIPResponse);
+    console.log(sendIPResponse);
 })();
 
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ urlencoded: true }));
 app.use(express.text({ type: 'application/json' }));
+
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
-
-
 app.get('/health', (req, res) => {
-    res.status(200).send("OK");
+    res.status(200).send({ msg: `api is working`, status: 'OK', port: PORT });
 });
 app.use('/api', require('./src/api'));
-
-(async () => {
-    try {
-        const config = {
-            method: 'get',
-            url: 'http://192.168.0.105:3002/health'
-        }
-        const ans = await axios(config);
-        console.log({ response: ans.data });
-    } catch (err) {
-        console.log({ err });
-    }
-})()
-
-
 
 app.listen(PORT, () => console.info(`API on port ${PORT}`));
 
