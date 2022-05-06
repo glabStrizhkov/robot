@@ -34,7 +34,7 @@ app.use('/api', require('./src/api'));
    try {
         const ans = await axios({
             method: 'get',
-            url: '172.17.0.1:3002/health'
+            url: 'http://127.0.0.1:3002/health'
         })
        console.log({ res: ans.data });
    } catch (error) {
