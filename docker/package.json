@@ -1,7 +1,9 @@
 {
   "scripts": {
-    "docker:up": "sudo docker compose up -d",
-    "docker:down": "sudo docker compose down",
-    "nano:yml": "nano docker-compose.yml"
+    "chmod": "sudo chmod +x ./chmod.sh; ./chmod.sh",
+    "docker:up-all": "./up.sh",
+    "docker:down-all": "./down.sh",
+    "docker:restart-ch": "./changeable/restart.sh",
+    "docker:create-network": "sudo docker network create --driver bridge robot"
   }
 }

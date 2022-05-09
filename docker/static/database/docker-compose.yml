@@ -1,0 +1,19 @@
+version: '3'
+services:
+  database:
+    image: postgres
+    container_name: database
+    restart: always
+    environment:
+      POSTGRES_USER: robot
+      POSTGRES_DB: robot
+      POSTGRES_PASSWORD: robot
+    networks:
+      - robot
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "5432:5432"
+networks:
+  robot:
+    external: true

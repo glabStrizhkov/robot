@@ -1,0 +1,1 @@
+/home/glab/Рабочий стол/Glab/modules/config/dir/config.json

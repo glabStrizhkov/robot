@@ -1,0 +1,32 @@
+{
+  "name": "robot-npm-varmaster",
+  "version": "1.0.0",
+  "description": "The package helps you to work with different types of vars and config file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glabStrizhkov/robot-npm-varMaster.git"
+  },
+  "keywords": [
+    "robot",
+    "config",
+    "var",
+    "fs",
+    "json",
+    "variables",
+    "npm",
+    "nodejs"
+  ],
+  "author": "Glab Strizhkov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/glabStrizhkov/robot-npm-varMaster/issues"
+  },
+  "homepage": "https://github.com/glabStrizhkov/robot-npm-varMaster#readme",
+  "dependencies": {
+    "path": "^0.12.7"
+  }
+}
