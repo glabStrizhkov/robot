@@ -3,7 +3,7 @@
     "chmod": "sudo chmod +x ./chmod.sh; ./chmod.sh",
     "docker:up-all": "./up.sh",
     "docker:down-all": "./down.sh",
-    "docker:restart-ch": "./changeable/restart.sh",
+    "docker:restart-ch": "npm run docker:restart --prefix ./changeable",
     "docker:create-network": "sudo docker network create --driver bridge robot"
   }
 }

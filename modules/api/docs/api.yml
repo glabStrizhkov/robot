@@ -15,10 +15,10 @@ servers:
   - url: http://localhost:3001
     description: Localhost client API (development)
 paths:
-  /:
+  /health:
     get:
       tags:
-        - nothing
+        - health
       responses:
         200:
           description: OK

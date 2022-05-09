@@ -4,8 +4,7 @@ const cors = require('cors');
 const { IP } = require('robot-npm-ip-holder');
 require('dotenv').config();
 const swaggerUi = require('swagger-ui-express');
-const axios = require('axios');
-const vars = require('robot-npm-varmaster');
+const path = require('path');
 
 const { SendIP } = require('./src/helpers/sendIP');
 const { specs } = require('./swagger');
@@ -41,6 +40,9 @@ app.get('/health', (req, res) => {
     res.status(200).send({ msg: `api is working`, healthObject });
 });
 app.use('/api', require('./src/api'));
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
+});
 
 app.listen(PORT, () => console.info(`API on port ${PORT}`));
 
