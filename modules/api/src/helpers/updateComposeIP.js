@@ -7,7 +7,7 @@ const containerList = [ 'db-master' ];
 
 const update = (ip) => {
     try {
-        let composeObj = YAML.load(path.join(__dirname, '../../../../docker/changeable/docker-compose.yml'))
+        let composeObj = YAML.load(path.join(__dirname, '../../../docker/changeable/docker-compose.yml'))
         for (let i = 0; i < containerList.length; i++) {
             const containerName = containerList[i];
             composeObj.services[containerName].hostname = ip;
