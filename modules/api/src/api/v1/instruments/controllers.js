@@ -1,8 +1,9 @@
-
+const { dbMaster } = require('../../../db/db');
+const instrumentServices = require('./services');
 
 module.exports = {
-    addInstrument(req, res){
-        res.status(200).json({ msg: "OK "});
+    addInstrument: async (req, res) => {
+        await instrumentServices.createInstrument(req, res, dbMaster);
     },
 
     getInstrument(req, res){

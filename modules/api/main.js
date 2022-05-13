@@ -5,11 +5,14 @@ const { IP } = require('robot-npm-ip-holder');
 require('dotenv').config();
 const swaggerUi = require('swagger-ui-express');
 const path = require('path');
+const db = require('robot-npm-dbmaster');
+
 
 const { SendIP } = require('./src/helpers/sendIP');
 const { specs } = require('./swagger');
 const { setVars } = require('./src/helpers/setVars');
 const { updateComposeIP } = require('./src/helpers/updateComposeIP');
+const { dbMaster } = require('./src/db/db');
 
 const { PORT, IP_HOLDER_URL, MY_PRODUCT_ID } = process.env;
 
@@ -28,7 +31,7 @@ const sendIP = new SendIP(ipHolder);
 setVars.serverStartSaving({ currentIP: ipHolder.ip });
 healthObject.updateCompose = updateComposeIP(setVars.is_ipChanged());
 healthObject.IP = ipHolder.ip;
-
+healthObject.dbMaster = dbMaster.createCrud();
 
 app.use(cors());
 app.use(bodyParser.json());
