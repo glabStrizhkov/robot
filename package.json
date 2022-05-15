@@ -6,12 +6,11 @@
   "scripts": {
     "chmod:chmod-sh": "sudo chmod +x ./scripts/chmod.sh",
     "chmod:all": "./scripts/chmod.sh",
-
     "docker:up-d-all": "scripts/up-down/docker-up.sh",
     "docker:down-all": "scripts/up-down/docker-down.sh",
-
     "pm2:up-api": "scripts/up-down/pm2-run.sh",
-    "pm2:down-api": "scripts/up-down/pm2-stop.sh"
+    "pm2:down-api": "scripts/up-down/pm2-stop.sh",
+    "local:sevices-run": "sudo chmod +x ./local-dev/dockerRun.sh; ./local-dev/dockerRun.sh"
   },
   "repository": {
     "type": "git",
@@ -25,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/glabStrizhkov/robot/issues"
   },
-  "homepage": "https://github.com/glabStrizhkov/robot#readme"
+  "homepage": "https://github.com/glabStrizhkov/robot#readme",
+  "dependencies": {
+    "robot-npm-ip-holder": "^1.1.0-onlyserver"
+  }
 }

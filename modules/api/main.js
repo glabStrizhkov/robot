@@ -14,7 +14,7 @@ const { setVars } = require('./src/helpers/setVars');
 const { updateComposeIP } = require('./src/helpers/updateComposeIP');
 const { dbMaster } = require('./src/db/db');
 
-const { PORT, IP_HOLDER_URL, MY_PRODUCT_ID } = process.env;
+const { PORT, IP_HOLDER_URL, MY_PRODUCT_ID, CUSTOM_IP } = process.env;
 
 const healthObject = {
     PORT,
@@ -23,7 +23,7 @@ const healthObject = {
 }
 
 const app = express();
-const ipHolder = new IP(IP_HOLDER_URL, MY_PRODUCT_ID);
+const ipHolder = new IP(IP_HOLDER_URL, MY_PRODUCT_ID, CUSTOM_IP);
 const sendIP = new SendIP(ipHolder);
 (async () => {
     const sendIPResponse = await sendIP.sendIP();
@@ -32,6 +32,8 @@ setVars.serverStartSaving({ currentIP: ipHolder.ip });
 healthObject.updateCompose = updateComposeIP(setVars.is_ipChanged());
 healthObject.IP = ipHolder.ip;
 healthObject.dbMaster = dbMaster.createCrud();
+if(CUSTOM_IP !== 'false') healthObject.ipHolderMode = 'customIP mode';
+else healthObject.ipHolderMode = 'default mode';
 
 app.use(cors());
 app.use(bodyParser.json());
