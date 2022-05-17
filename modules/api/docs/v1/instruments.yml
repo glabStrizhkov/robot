@@ -24,10 +24,10 @@ paths:
                   example: coagulatingClamp1
                 isConnected:
                   type: string
-                  example: false
+                  example: "false"
                 isActive:
                   type: string
-                  example: false
+                  example: "false"
       responses:
         200:
           description: OK
@@ -120,10 +120,10 @@ paths:
                   example: coagulatingClamp1
                 isConnected:
                   type: string
-                  example: true
+                  example: "true"
                 isActive:
                   type: string
-                  example: true
+                  example: "true"
       responses:
         200:
           description: OK
