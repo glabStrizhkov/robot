@@ -25,7 +25,7 @@
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "gh-config": "^1.0.2",
-    "robot-npm-dbmaster": "^1.0.1-alpha",
+    "robot-npm-dbmaster": "^1.0.5-alpha",
     "robot-npm-ip-holder": "^1.1.0-onlyserver",
     "robot-npm-varmaster": "^1.0.0",
     "swagger-jsdoc": "^6.2.1",

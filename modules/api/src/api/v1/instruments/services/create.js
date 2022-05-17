@@ -9,7 +9,6 @@ const createInstrument  = async (req, res, dbMaster) => {
         isConnected,
         isActive
     } = req.body;
-    console.log(111, req.body);
     if( !instrumentId ||
         !instrumentType ||
         !instrumentLocalName ||

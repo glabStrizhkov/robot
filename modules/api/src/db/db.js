@@ -6,7 +6,9 @@ class DBMaster {
     dbMaster_url
     createCrud(){
         try {
-            this.dbMaster_url = `${vars.savable.currentIP}:3002`
+            this.dbMaster_url = `http://${vars.savable.currentIP}:${process.env.DB_MUSTER_PORT}`
+            console.log(this.dbMaster_url);
+
             this.crud = new CRUD(this.dbMaster_url);
             return { msg: 'The object crud is successfully created' };
         } catch (error) {
@@ -18,6 +20,5 @@ class DBMaster {
 }
 
 const dbMaster = new DBMaster();
-
 
 module.exports = { dbMaster };

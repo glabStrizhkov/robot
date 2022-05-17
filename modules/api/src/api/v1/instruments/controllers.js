@@ -3,7 +3,7 @@ const instrumentServices = require('./services');
 
 module.exports = {
     addInstrument: async (req, res) => {
-        await instrumentServices.createInstrument(req, res, dbMaster);
+        await instrumentServices.createInsstrument(req, res, dbMaster);
     },
 
     getInstrument(req, res){

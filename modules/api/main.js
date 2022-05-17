@@ -1,11 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const { IP } = require('robot-npm-ip-holder');
 require('dotenv').config();
+const { IP } = require('robot-npm-ip-holder');
 const swaggerUi = require('swagger-ui-express');
 const path = require('path');
-const db = require('robot-npm-dbmaster');
 
 
 const { SendIP } = require('./src/helpers/sendIP');
