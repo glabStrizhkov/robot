@@ -31,7 +31,7 @@ const createInstrument  = async (req, res, dbMaster) => {
                     instrumentType,
                     instrumentLocalName,
                     isConnected,
-                    isActive
+                    isCalibrated
                 });
                 if(status !== 200) res.status(500).json({ msg: 'dbMaster error', details: { status, data } });
                 else res.status(200).json({ msg: 'Instrument created' });
