@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:postgresql://192.168.0.102:5432/robot</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="robot@192.168.0.100" uuid="03e983ab-6d45-4326-91bd-ab2a1f819ba7">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://192.168.0.100:5432/robot</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

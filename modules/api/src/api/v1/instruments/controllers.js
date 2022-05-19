@@ -3,30 +3,30 @@ const instrumentServices = require('./services');
 
 module.exports = {
     addInstrument: async (req, res) => {
-        await instrumentServices.createInsstrument(req, res, dbMaster);
+        await instrumentServices.createInstrument(req, res, dbMaster);
     },
 
-    getInstrument(req, res){
-        res.status(200).json({ msg: "OK "});
+    getInstrument: async (req, res) => {
+        await instrumentServices.get.one.bySearchObject(req, res, dbMaster);
     },
 
-    getAllInstruments(req, res){
-        res.status(200).json({ msg: "OK "});
+    getAllInstruments: async (req, res) => {
+        await instrumentServices.get.all.list(req, res, dbMaster);
     },
 
-    connectInstrument(req, res){
-        res.status(200).json({ msg: "OK "});
+    connectInstrument: async (req, res) => {
+        await instrumentServices.connectDis.connect(req, res, dbMaster);
     },
 
-    disconnectInstrument(req, res){
-        res.status(200).json({ msg: "OK "});
+    disconnectInstrument: async (req, res) => {
+        await instrumentServices.connectDis.disconnect(req, res, dbMaster);
     },
 
-    updateInstrument(req, res){
-        res.status(200).json({ msg: "OK "});
+    updateInstrument: async (req, res) => {
+        await instrumentServices.update(req, res, dbMaster);
     },
 
-    removeInstrument(req, res){
-        res.status(200).json({ msg: "OK "});
-    }
+    removeInstrument: async (req, res) => {
+        await instrumentServices.remove(req, res, dbMaster);
+    },
 }
