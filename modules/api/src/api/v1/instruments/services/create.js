@@ -8,13 +8,13 @@ const createInstrument  = async (req, res, dbMaster) => {
         instrumentType,
         instrumentLocalName,
         isConnected,
-        isActive
+        isCalibrated
     } = req.body;
     if( !instrumentId ||
         !instrumentType ||
         !instrumentLocalName ||
         !isConnected ||
-        !isActive) res.status(400).json({ msg: 'All fields are required!', error: {} });
+        !isCalibrated) res.status(400).json({ msg: 'All fields are required!', error: {} });
 
     try {
         const isExist = await checkByPk(dbMaster, 'Instruments', 'instrumentId', instrumentId);
