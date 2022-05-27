@@ -9,13 +9,13 @@ services:
       DATABASE: robot
       DB_USER: robot
       DB_PASSWORD: robot
-      DB_HOST: 192.168.0.100
+      DB_HOST: 192.168.0.104
       DB_PORT: 5432
       DIALECT: postgres
       IS_DEV: false
     networks:
       - robot
-    hostname: 192.168.0.100
+    hostname: 192.168.0.104
     extra_hosts:
       - 'host.docker.internal:host-gateway'
     ports:

@@ -1,0 +1,23 @@
+{
+  "name": "driver",
+  "version": "1.0.0",
+  "description": "driver of robot",
+  "main": "main.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git"
+  },
+  "keywords": [
+    "robot"
+  ],
+  "author": "Glab Strizhkov",
+  "license": "MIT",
+  "dependencies": {
+    "ax-request-builder": "^1.0.0-unstable",
+    "axios": "^0.27.2",
+    "querystring": "^0.2.1"
+  }
+}
