@@ -1,3 +1,3 @@
-const { getInstruments } = require('./apiServices');
+const { getInstruments, addInstrument } = require('./apiServices');
 
-module.exports = { getInstruments };
+module.exports = { getInstruments, addInstrument };

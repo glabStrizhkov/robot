@@ -1,3 +1,4 @@
 const getInstruments = require('./getInstrument');
+const { addInstrument } = require('./addInstrument')
 
-module.exports = { getInstruments };
+module.exports = { getInstruments, addInstrument };

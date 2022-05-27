@@ -4,7 +4,8 @@
   "description": "driver of robot",
   "main": "main.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "start": "node main.js"
   },
   "repository": {
     "type": "git",
@@ -16,8 +17,9 @@
   "author": "Glab Strizhkov",
   "license": "MIT",
   "dependencies": {
-    "ax-request-builder": "^1.0.0-unstable",
+    "ax-request-builder": "^1.0.1-unstable",
     "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
     "querystring": "^0.2.1"
   }
 }
